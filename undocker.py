@@ -77,6 +77,7 @@ def main():
             fd.write(data)
         fd.seek(0)
         with tarfile.TarFile(fileobj=fd) as img:
+            print 'img'
             repos = img.extractfile('repositories')
             repos = json.load(repos)
 
